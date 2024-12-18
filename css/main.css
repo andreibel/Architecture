@@ -63,7 +63,7 @@ h1 {
 .column {
   flex: 1; /* Equal width for all columns */
   padding: 15px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow */
   border-radius: 15px; /* Rounded corners */
   transition: transform 0.3s, box-shadow 0.3s; /* Smooth transitions */
   background-color: #ffffff; /* Default background (overridden by IDs) */
@@ -85,7 +85,7 @@ h1 {
 /* Hover effect to slightly lift the column */
 .column:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 30px 2px rgba(0, 0, 0, 0.15);
 }
 
 /* Clear floats after the columns (no longer needed with Flexbox, but kept for any legacy styles) */

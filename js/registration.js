@@ -1,12 +1,21 @@
 let dateChange = false;
 let tiemChange = false;
+let date = document.getElementById("idDate");
+let time = document.getElementById("idTime");
+const serviceRadios = document.querySelectorAll('input[name="services"]');
+    
+// Select all extra service checkboxes
+const extraCheckboxes = document.querySelectorAll('input[name="extraServices"]');
+    
+// Select the total price display element
+const totalPriceDiv = document.getElementById('totalPrice');
+
 
 function register(){
     let fullname = document.getElementById("idName");
     let email = document.getElementById("idEmail");
     let phone = document.getElementById("idphoneNumber");
-    let date = document.getElementById("idDate");
-    let time = document.getElementById("idTime");
+
     let radioServis = document.getElementsByName("services");
     //TODO: save the extra service
     if (fullname.value == "") { // checks if user enter name
@@ -44,8 +53,35 @@ function register(){
 date.addEventListener("change", function(){ dateChange = true;}) // TODO: change this function aftet every time that we change the date we will add or remove time in drop box
 time.addEventListener("change", function(){ tiemChange = true;})
 
-//TODO: eventlisiner change the price in the service area
-// every change will calcualte againe
+function calculateTotal() {
+    let total = 0;
+
+    // Iterate through main services and add the price of the selected one
+    serviceRadios.forEach(radio => {
+        if (radio.checked) {
+            total += parseFloat(radio.getAttribute('data-price')) || 0;
+        }
+    });
+
+    // Iterate through extra services and add the prices of the selected ones
+    extraCheckboxes.forEach(checkbox => {
+        if (checkbox.checked) {
+            total += parseFloat(checkbox.getAttribute('data-price')) || 0;
+        }
+    });
+
+    // Update the total price display
+    totalPriceDiv.textContent = `Total Price: $${total}`;
+}
+serviceRadios.forEach(radio => {
+    radio.addEventListener('change', calculateTotal);
+});
+
+// Attach event listeners to extra service checkboxes
+extraCheckboxes.forEach(checkbox => {
+    checkbox.addEventListener('change', calculateTotal);
+});
+
 
 // check if the user select servise
 function radioCheckd(radioServis){
