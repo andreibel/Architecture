@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Barbershop</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="icon" type="image/x-icon" href="../assets/img/favicon2.png">
+</head>
+<body>
+    
+    <!-- Header Section: Displays the shop's title and contact details -->
+    <div class="header">
+        <div>
+            <h1>Welcome to Yaniv Swisa Barber's Shop</h1>
+            <p>45 Willow Lane &nbsp;&nbsp;London, NW3 6QT United Kingdom&nbsp;&nbsp;Phone: 046712345</p>
+        </div>
+        <div>
+            <img id="headImage" src="assets/barber-pole-svgrepo-com.svg" alt="">
+        </div> 
+    </div>
+    <!-- Navigation Section: Links for quick access to sections -->
+    <div class="topnavigation">
+        <a href="#services">Services</a>
+        <a href="#appointment">Book Appointment</a>
+        <a href="#contact">Contact</a>
+    </div>
+    
+    <!-- Appointment Form: Form for booking appointments -->
+    <form id="appointment-form" action="#" method="post">
+        <div class="row">
+            <!-- Column 1: About Me Section -->
+            <div class="column" id="column1">
+                <h2>About me</h2>
+                <p>Welcome to Yaniv Swisa Barber in London, where traditional grooming meets modern style. Led by the skilled Yaniv Swisa, we offer expert haircuts, precision beard trims, and classic hot towel shaves using only premium products in a relaxed and friendly environment. Whether you're looking for a timeless look or the latest trend, Yaniv provides personalized services tailored to your unique style. Book your appointment today online, call us at 046712345, or visit our London location. Follow us on <a href="https://www.instagram.com/braude_college?igsh=andheDNqajVrajVj">instegram</a> for the latest updates and special offers. Experience top-tier grooming and leave looking and feeling your best at Yaniv Swisa Barber!</p>
+            </div>
+            
+            <!-- Column 2: Services Selection Section -->
+            <div class="column" id="column2">
+                <h2>Select Your Services</h2>
+                <table class="serveis-table">
+                    <tr>
+                        <th>Select</th>
+                        <th>Service</th>
+                        <th>Price</th>
+                    </tr>
+                    <!-- Service options with corresponding prices -->
+                    <tr>
+                        <td><input type="radio" name="services" value="haircut" data-price="20"></td>
+                        <td>Haircut</td>
+                        <td>$20</td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" name="services" value="beard_trim" data-price="10"></td>
+                        <td>Beard Trim</td>
+                        <td>$10</td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" name="services" value="full_package" data-price="35"></td>
+                        <td>Full Package</td>
+                        <td>$35</td>
+                    </tr>
+                    <!-- Optional additional services -->
+                    <tr>
+                        <td><input type="checkbox" name="extaServices" value="extra_service1" data-price="5"></td>
+                        <td>Extra Service 1</td>
+                        <td>$5</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="extaServices" value="extra_service2" data-price="15"></td>
+                        <td>Extra Service 2</td>
+                        <td>$15</td>
+                    </tr>
+                </table>
+                <!-- Displays the total price of selected services -->
+                <div id="totalPrice">Total Price: $0</div>
+            </div>
+            
+            <!-- Column 3: Appointment Booking Section -->
+            <div class="column" id="column3">
+                <h2>Book Your Appointment</h2>
+                
+                <!-- Input for user's full name -->
+                <div class="form-group">
+                    <label for="name">Full Name:</label>
+                    <div>
+                        <input type="text" id="idName" name="name" required>
+                    </div>
+                </div>
+                
+                <!-- Input for user's email -->
+                <div class="form-group">
+                    <label for="email">Email Address:</label>
+                    <div>
+                        <input type="email" id="idEmail" name="email" placeholder="example@mail.com" required>
+                    </div>
+                </div>
+                
+                <!-- Input for user's phone number -->
+                <div class="form-group">
+                    <label for="phoneNuber">Phone Number:</label>
+                    <div>
+                        <input type="text" id="idphoneNumber" name="phoneNumber" required>
+                    </div>
+                </div>
+                
+                <!-- Input for preferred appointment date -->
+                <div class="form-group">
+                    <label for="date">Preferred Date:</label>
+                    <div>
+                        <input type="date" id="idDate" name="date" required>
+                    </div>
+                </div>
+                
+                <!-- Input for preferred appointment time -->
+                <div class="form-group">
+                    <label for="time">Preferred Time:</label>
+                    <div>
+                        <input type="time" id="idTime" name="time" required>
+                    </div>
+                </div>
+                <br>
+                <!-- Buttons for form submission and reset -->
+                <div class="buttons">
+                    <button type="button" id="submitButton" onclick="register()">Book Now</button>
+                    <br>
+                    <button type="reset" id="clearButton">Clear Form</button>
+                </div>
+            </div>
+        </div>
+    </form>
+    
+    <!-- External JavaScript for additional functionality -->
+    <script src="../js/registration.js"></script>
+</body>
+</html>
