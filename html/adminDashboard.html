@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Admin Dashboard</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="icon" type="image/x-icon" href="../assets/img/favicon2.png">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Header Section: Admin Dashboard Title -->
+    <div class="header">
+        <div>
+            <h1>Admin Dashboard</h1>
+            <p>Monitor chosen services and appointments</p>
+        </div>
+        <div>
+            <img id="headImage" src="../assets/img/admin.svg" alt="Admin Dashboard">
+        </div>
+    </div>
+    
+    <!-- Navigation Section: Links for navigating admin features -->
+    <div class="topnavigation">
+        <a href="index.html">Home</a>
+    </div>
+    <!-- main div -->
+    <div>
+        <!-- Main Content Section: Bar Chart for Chosen Services -->
+        <div class="content">
+            <h2>Services Overview</h2>
+            <p>The chart below shows the number of times each service was chosen.</p>
+            <canvas id="servicesChart" width="400" height="200"></canvas>
+        </div>
+        <!-- Main Content Section: Appointments table -->
+        <div class="content">
+            <h2>Appointments Table</h2>
+        </div>
+    </div>
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Yaniv Swisa Barber's Shop. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

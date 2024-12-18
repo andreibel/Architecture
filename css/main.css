@@ -28,6 +28,10 @@ h1 {
 #headImage {
   width: 100px;
 }
+iframe#map{
+  height: 300px;
+  width: 100%;
+}
 
 /* Style the top navigation bar */
 .topnavigation {
@@ -67,6 +71,10 @@ h1 {
   border-radius: 15px; /* Rounded corners */
   transition: transform 0.3s, box-shadow 0.3s; /* Smooth transitions */
   background-color: #ffffff; /* Default background (overridden by IDs) */
+}
+
+#h2Map {
+  text-align: center;
 }
 
 /* Specific background colors for each column using IDs */

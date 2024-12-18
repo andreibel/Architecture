@@ -21,9 +21,7 @@
     </div>
     <!-- Navigation Section: Links for quick access to sections -->
     <div class="topnavigation">
-        <a href="#services">Services</a>
-        <a href="#appointment">Book Appointment</a>
-        <a href="#contact">Contact</a>
+        <a href="adminDashboard.html">Admin Dashboard</a>
     </div>
     
     <!-- Appointment Form: Form for booking appointments -->
@@ -33,6 +31,11 @@
             <div class="column" id="column1">
                 <h2>About me</h2>
                 <p>Welcome to Yaniv Swisa Barber in London, where traditional grooming meets modern style. Led by the skilled Yaniv Swisa, we offer expert haircuts, precision beard trims, and classic hot towel shaves using only premium products in a relaxed and friendly environment. Whether you're looking for a timeless look or the latest trend, Yaniv provides personalized services tailored to your unique style. Book your appointment today online, call us at 046712345, or visit our London location. Follow us on <a href="https://www.instagram.com/braude_college?igsh=andheDNqajVrajVj">instegram</a> for the latest updates and special offers. Experience top-tier grooming and leave looking and feeling your best at Yaniv Swisa Barber!</p>
+
+                <div>
+                    <h2 id="h2Map"> Where to find me </h2>
+                    <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d158857.83988670303!2d0.06320612103763085!3d51.528739805036366!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1zNDUgV2lsbG93IExhbmUsIExvbmRvbiwg15HXqNeZ15jXoNeZ15Q!5e0!3m2!1siw!2sil!4v1734548809641!5m2!1siw!2sil" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div> 
             </div>
             
             <!-- Column 2: Services Selection Section -->
@@ -114,9 +117,10 @@
                 
                 <!-- Input for preferred appointment time -->
                 <div class="form-group">
-                    <label for="time">Preferred Time:</label>
+                    <label id='timelbl' for="time">Preferred Time:</label>
                     <div>
-                        <input type="time" id="idTime" name="time" required>
+                        <select name="Time" id="idTime" required>
+                          </select>
                     </div>
                 </div>
                 <br>
@@ -129,8 +133,27 @@
             </div>
         </div>
     </form>
+
+
     
+    <div id="bthn" lang="en"></div><script>
+        (function () {
+           var script = document.createElement("script");
+           script.type = "text/javascript";
+           script.src = "https://bringthemhomenow.net/1.1.0/hostages-ticker.js";
+           script.setAttribute(
+             "integrity",
+             "sha384-DHuakkmS4DXvIW79Ttuqjvl95NepBRwfVGx6bmqBJVVwqsosq8hROrydHItKdsne"
+           );
+           script.setAttribute("crossorigin", "anonymous");
+           document.getElementsByTagName("head")[0].appendChild(script);
+         })();
+        </script>
+        
+        
     <!-- External JavaScript for additional functionality -->
+    <script src="../js/dataAccsess.js" ></script>
     <script src="../js/registration.js"></script>
+    
 </body>
 </html>
