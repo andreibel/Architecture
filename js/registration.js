@@ -8,6 +8,7 @@ function register(){
     let date = document.getElementById("idDate");
     let time = document.getElementById("idTime");
     let radioServis = document.getElementsByName("services");
+    //TODO: save the extra service
     if (fullname.value == "") { // checks if user enter name
         alert("enter name");
         return;
@@ -32,6 +33,7 @@ function register(){
         alert("need to enter service");
         return;
     }
+    //TODO: change the this to make dicunary and save it with dataAccess.js
     alert(`thank you Mr,/Mrs, ${fullname.value} for Book hair cut on date: ${date.value} in time: ${time.value}. we will call you to this number ${phone.value}`);
     document.getElementById("appointment-form").reset();
     
@@ -39,9 +41,11 @@ function register(){
 
 
 // if user enter his date and time (not defult date/time)
-date.addEventListener("change", function(){ dateChange = true;})
+date.addEventListener("change", function(){ dateChange = true;}) // TODO: change this function aftet every time that we change the date we will add or remove time in drop box
 time.addEventListener("change", function(){ tiemChange = true;})
 
+//TODO: eventlisiner change the price in the service area
+// every change will calcualte againe
 
 // check if the user select servise
 function radioCheckd(radioServis){
