@@ -1,22 +1,15 @@
 let dateChange = false;
-let timeChange = false;
 let date = document.getElementById("idDate");
-
 const serviceRadios = document.querySelectorAll('input[name="services"]');
-    
-// Select all extra service checkboxes
 const extraCheckboxes = document.querySelectorAll('input[name="extraServices"]');
-    
-// Select the total price display element
 const totalPriceDiv = document.getElementById('totalPrice');
-
-let timeCombobox = document.getElementById('idTime');
 
 
 function register(){
     let fullname = document.getElementById("idName");
     let email = document.getElementById("idEmail");
     let phone = document.getElementById("idphoneNumber");
+    const timeCombobox = document.getElementById('idTime');
 
     let radioServices = radioChecked(document.getElementsByName("services"));
     let extras = getExtras(extraCheckboxes);
@@ -37,12 +30,12 @@ function register(){
         alert("need to enter date");
         return;
     }
-    if (timeCombobox.value == "")
+    if (timeCombobox.value == "no time")
     {
         alert("change date");
         return;
     }
-    if (radioServices == "no time"){ // no enter servise
+    if (radioServices == ""){ // no enter servise
         alert("need to enter service");
         return;
     }
@@ -51,14 +44,12 @@ function register(){
         email: email.value,
         phone: phone.value,
         date: date.value,
-        time: time.value,
+        time: timeCombobox.value,
         service: radioServices,
         extras: extras
     };
-    //{name: "", Email: "", phone:"",date:"",time"",service:"",extra:["",""]} 
     saveRegistration(personRegistration);
     clearTime();
-    //alert(`thank you Mr,/Mrs, ${fullname.value} for Book hair cut on date: ${date.value} in time: ${time.value}. we will call you to this number ${phone.value}`);
     document.getElementById("appointment-form").reset();
     
 }
@@ -71,7 +62,6 @@ date.addEventListener("change", function(){
     updateTimesByDate(date.value);
 });
 
-// TODO: change this function after every time that we change the date we will add or remove time in drop box
 
 function calculateTotal() {
     let total = 0;
@@ -120,30 +110,39 @@ function getExtras(checkboxes){
     }
     return selected;
 }
-
+/**
+ * Removes all options from the time select dropdown.
+ */
 function clearTime(){
+    let timeCombobox = document.getElementById('idTime');
     while (timeCombobox.length > 0) timeCombobox.remove(0);
 }
-
+/**
+ * Updates the time select dropdown based on the selected date.
+ * Adds available times and handles the scenario when no times are available.
+ *
+ * @param {string} selectedDate - The date for which to update available times.
+ */
 function updateTimesByDate(date){
+    let timeCombobox = document.getElementById('idTime');
     let used = getAllUsedTimesByDate(date);
-    for (let i = 8; i < 17; i++){
-        let timeUsed = false;
-        for (let j = 0; j < used.length; j++){
-            if (Number(used[j].substring(0, 2)) == i){
-                timeUsed = true;
-                break;
-            }
-        }
-        if (!timeUsed){
-            let option = document.createElement("option");
-            option.text = (i < 10) ? `0${i}:00` : `${i}:00`;
-            timeCombobox.add(option);
-        }
+    let listPosivbleHour = [];
+    for (let hour = 8; hour < 17; hour++){
+        listPosivbleHour.push((hour < 10) ? `0${hour}:00` : `${hour}:00`);
     }
-    if (timeCombobox.options.length == 0){
+    let notUsedTime = listPosivbleHour.filter(usedTime => !used.includes(usedTime));
+
+    for(let k = 0; k < notUsedTime.length; k++){
+        let option = document.createElement("option");
+        option.text = notUsedTime[k];
+        timeCombobox.add(option);
+    }
+
+    if (timeCombobox.options.length === 0){
+        let option = document.createElement("option");
         document.getElementById('timelbl').value = "No Time Available";
-        timeCombobox.add("no time");
+        option.text = "no time";
+        timeCombobox.add(option);
     } 
 }
 

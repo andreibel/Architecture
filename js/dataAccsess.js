@@ -53,11 +53,15 @@ function getAllUsedTimesByDate(date){
     return usedTime;
 }
 
-// function getServices(){
-//     let registrations = getAllRegistration();
-//     let services = {"haircut":0,"beard_trim":0,"full_package":0};
-//     for (let key in registrations) {
-        
-//     }
-// }
+function getServices(){
+    let registrations = getAllRegistration();
+    let services = {haircut:0,beard_trim:0,full_package:0, extra_service1:0,extra_service2:0};
+    for (let key in registrations) {
+        services[registrations[key].service] += 1;
+        for(let l in registrations[key].extras){
+            services[registrations[key].extras[l]] +=1
+        }
+    }
+    console.log(services);
+}
 
