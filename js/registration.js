@@ -126,11 +126,11 @@ function clearTime(){
 function updateTimesByDate(date){
     let timeCombobox = document.getElementById('idTime');
     let used = getAllUsedTimesByDate(date);
-    let listPosivbleHour = [];
+    let listPossibleHour = [];
     for (let hour = 8; hour < 17; hour++){
-        listPosivbleHour.push((hour < 10) ? `0${hour}:00` : `${hour}:00`);
+        listPossibleHour.push((hour < 10) ? `0${hour}:00` : `${hour}:00`);
     }
-    let notUsedTime = listPosivbleHour.filter(usedTime => !used.includes(usedTime));
+    let notUsedTime = listPossibleHour.filter(usedTime => !used.includes(usedTime));
 
     for(let k = 0; k < notUsedTime.length; k++){
         let option = document.createElement("option");

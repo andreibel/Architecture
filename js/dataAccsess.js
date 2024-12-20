@@ -8,13 +8,13 @@
 // key: {name: "", Email: "", phone:"",date:"",time"",service:"",extra:[1,2,3]},
 // key: {name: "", Email: "", phone:"",date:"",time"",service:"",extra:[1,2,3]},
 // }
-// services§:
-//{}
 //
 //}
 // {name: "", Email: "", phone:"",date:"",time"",service:"",extra:[1,2,3]} is json structure that we will named registration
 
 //get json of person and enter it into the local storage
+
+//save the registration in the local storage
 function saveRegistration(personRegistration){
     let registrations = getAllRegistration();
     let uniqueKey = idMaker();
@@ -62,6 +62,6 @@ function getServices(){
             services[registrations[key].extras[l]] +=1
         }
     }
-    console.log(services);
+    return services;
 }
 
