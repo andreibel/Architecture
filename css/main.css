@@ -77,18 +77,7 @@ iframe#map{
   text-align: center;
 }
 
-/* Specific background colors for each column using IDs */
-#column1 {
-  background-color: #e6f7ff; /* Light Blue */
-}
 
-#column2 {
-  background-color: #fffbe6; /* Light Yellow */
-}
-
-#column3 {
-  background-color: #f9f0ff; /* Light Purple */
-}
 
 /* Hover effect to slightly lift the column */
 .column:hover {
