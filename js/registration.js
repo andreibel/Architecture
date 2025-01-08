@@ -154,7 +154,7 @@ function isValidPhoneNumber(number){
 
 // check valid Email with regular expression 
 function isValidEmail(email){
-    const pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+    const pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return pattern.test(email);
 }
 

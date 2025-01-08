@@ -1,19 +1,3 @@
-//this js code will handle database on local storage 
-//the build of the data will be in this structure:
-// local storage:{
-// registrations:
-// {
-// key: {name: "", Email: "", phone:"",date:"",time"",service:"",extra:[1,2,3]},
-// key: {name: "", Email: "", phone:"",date:"",time"",service:"",extra:[1,2,3]},
-// key: {name: "", Email: "", phone:"",date:"",time"",service:"",extra:[1,2,3]},
-// key: {name: "", Email: "", phone:"",date:"",time"",service:"",extra:[1,2,3]},
-// }
-//
-//}
-// {name: "", Email: "", phone:"",date:"",time"",service:"",extra:[1,2,3]} is json structure that we will named registration
-
-//get json of person and enter it into the local storage
-
 //save the registration in the local storage
 function saveRegistration(personRegistration){
     let registrations = getAllRegistration();

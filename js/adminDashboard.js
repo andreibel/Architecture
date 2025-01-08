@@ -85,6 +85,7 @@ let myBarChart = new Chart(ctx, {
         scales: {
             y: {
                 beginAtZero: true // Ensure the Y-axis starts at zero
+                //TODO: change-scale in in y (only integer)
             }
         }
     }
