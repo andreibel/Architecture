@@ -59,7 +59,7 @@ for(let key in services){
 let myBarChart = new Chart(ctx, {
     type: 'bar', // Specifies the chart type
     data: {
-        labels: ['Haircut', 'Beard Trim', 'Full Package', '	Extra Service 1', '	Extra Service 2'], // X-axis labels
+        labels: ['Haircut', 'Beard Trim', 'Full Package', 'head washing', 'eyebrows trim'], // X-axis labels
         datasets: [{
             label: 'Amount',
             data: rawData, // Y-axis data

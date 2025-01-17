@@ -51,7 +51,16 @@ function register(){
     saveRegistration(personRegistration);
     clearTime();
     document.getElementById("appointment-form").reset();
+    document.getElementById("totalPrice").textContent = "Total Price: $0";
     
+}
+
+
+function costumReset(){
+    clearTime();
+    console.log("reset");
+    document.getElementById("appointment-form").reset();
+    document.getElementById("totalPrice").textContent = "Total Price: $0";
 }
 
 

@@ -23,20 +23,12 @@
     <div class="topnavigation">
         <a href="adminDashboard.html">Admin Dashboard</a>
     </div>
-    
+    <!-- Column 1: About Me Section -->
+   
     <!-- Appointment Form: Form for booking appointments -->
     <form id="appointment-form" action="#" method="post">
         <div class="row">
-            <!-- Column 1: About Me Section -->
-            <div class="column" id="column1">
-                <h2>About me</h2>
-                <p>Welcome to Yaniv Swisa Barber in London, where traditional grooming meets modern style. Led by the skilled Yaniv Swisa, we offer expert haircuts, precision beard trims, and classic hot towel shaves using only premium products in a relaxed and friendly environment. Whether you're looking for a timeless look or the latest trend, Yaniv provides personalized services tailored to your unique style. Book your appointment today online, call us at 046712345, or visit our London location. Follow us on <a href="https://www.instagram.com/braude_college?igsh=andheDNqajVrajVj">instegram</a> for the latest updates and special offers. Experience top-tier grooming and leave looking and feeling your best at Yaniv Swisa Barber!</p>
-
-                <div>
-                    <h2 id="h2Map"> Where to find me </h2>
-                    <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d158857.83988670303!2d0.06320612103763085!3d51.528739805036366!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1zNDUgV2lsbG93IExhbmUsIExvbmRvbiwg15HXqNeZ15jXoNeZ15Q!5e0!3m2!1siw!2sil!4v1734548809641!5m2!1siw!2sil" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div> 
-            </div>
+            
             
             <!-- Column 2: Services Selection Section -->
             <div class="column" id="column2">
@@ -65,13 +57,13 @@
                     </tr>
                     <!-- Optional additional services -->
                     <tr>
-                        <td><input type="checkbox" name="extraServices" value="extra_service1" data-price="5"></td>
-                        <td>Extra Service 1</td>
+                        <td><input type="checkbox" name="extraServices" value="head_washing" data-price="5"></td>
+                        <td>head washing</td>
                         <td>$5</td>
                     </tr>
                     <tr>
-                        <td><input type="checkbox" name="extraServices" value="extra_service2" data-price="15"></td>
-                        <td>Extra Service 2</td>
+                        <td><input type="checkbox" name="extraServices" value="eyebrows_trim" data-price="15"></td>
+                        <td>eyebrows trim</td>
                         <td>$15</td>
                     </tr>
                 </table>
@@ -86,42 +78,31 @@
                 <!-- Input for user's full name -->
                 <div class="form-group">
                     <label for="name">Full Name:</label>
-                    <div>
                         <input type="text" id="idName" name="name" required>
-                    </div>
                 </div>
                 
                 <!-- Input for user's email -->
                 <div class="form-group">
                     <label for="email">Email Address:</label>
-                    <div>
                         <input type="email" id="idEmail" name="email" placeholder="example@mail.com" required>
-                    </div>
                 </div>
                 
                 <!-- Input for user's phone number -->
                 <div class="form-group">
                     <label for="phoneNuber">Phone Number:</label>
-                    <div>
                         <input type="text" id="idphoneNumber" name="phoneNumber" required>
-                    </div>
                 </div>
                 
                 <!-- Input for preferred appointment date -->
                 <div class="form-group">
                     <label for="date">Preferred Date:</label>
-                    <div>
                         <input type="date" id="idDate" name="date" required>
-                    </div>
                 </div>
                 
                 <!-- Input for preferred appointment time -->
                 <div class="form-group">
                     <label id='timelbl' for="time">Preferred Time:</label>
-                    <div>
-                        <select name="Time" id="idTime" required>
-                          </select>
-                    </div>
+                        <select name="Time" id="idTime" required></select>
                 </div>
                 <br>
                 <!-- Buttons for form submission and reset -->
@@ -129,12 +110,20 @@
                     <button type="button" id="submitButton" onclick="register()">Book Now</button>
                     <br>
                     <!--TODO: fix bug when price not reset too-->
-                    <button type="reset" id="clearButton">Clear Form</button>
+                    <button type="button" id="clearButton" onclick="costumReset()">Clear Form</button>
                 </div>
             </div>
         </div>
     </form>
+    <div class="column" id="column1" style="font-size: 30px;">
+        <h2>About me</h2>
+        <p>Welcome to Yaniv Swisa Barber in London, where traditional grooming meets modern style. Led by the skilled Yaniv Swisa, we offer expert haircuts, precision beard trims, and classic hot towel shaves using only premium products in a relaxed and friendly environment. Whether you're looking for a timeless look or the latest trend, Yaniv provides personalized services tailored to your unique style. Book your appointment today online, call us at 046712345, or visit our London location. Follow us on <a href="https://www.instagram.com/braude_college?igsh=andheDNqajVrajVj">instegram</a> for the latest updates and special offers. Experience top-tier grooming and leave looking and feeling your best at Yaniv Swisa Barber!</p>
 
+        <div>
+            <h2 id="h2Map"> Where to find me </h2>
+            <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d158857.83988670303!2d0.06320612103763085!3d51.528739805036366!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1zNDUgV2lsbG93IExhbmUsIExvbmRvbiwg15HXqNeZ15jXoNeZ15Q!5e0!3m2!1siw!2sil!4v1734548809641!5m2!1siw!2sil" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div> 
+    </div>
 
     
     <div id="bthn" lang="en"></div><script>

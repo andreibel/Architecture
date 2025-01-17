@@ -6,14 +6,22 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
+  background-color: #e8c1c1;
 }
 
 h2 {
   color: palevioletred;
+  font-size: 40px;
 }
-
+#column1{
+  margin: 20px;
+}
 h1 {
   color: darkmagenta;
+  font-size: 50px;
+}
+#appointment-form{
+  font-size: 30px;
 }
 
 /* Style the header */
@@ -24,7 +32,18 @@ h1 {
   padding: 20px;
   background-color: #f2f2f2; /* Light gray background for header */
 }
-
+.form-group{
+  display: flex;
+  justify-content: space-between;
+}
+#column3 input{
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    width: 300px;
+}
+#column3{
+  margin: 0.5rem;
+}
 #headImage {
   width: 100px;
 }
