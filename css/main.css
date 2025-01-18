@@ -23,7 +23,12 @@ h1 {
 #appointment-form{
   font-size: 30px;
 }
-
+#column2{
+  background-color: #ffecec;
+}
+#column3{
+  background-color: #f2ffdb;
+}
 /* Style the header */
 .header {
   display: flex;

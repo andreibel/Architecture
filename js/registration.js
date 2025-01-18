@@ -4,6 +4,9 @@ const serviceRadios = document.querySelectorAll('input[name="services"]');
 const extraCheckboxes = document.querySelectorAll('input[name="extraServices"]');
 const totalPriceDiv = document.getElementById('totalPrice');
 
+const today = new Date().toISOString().split('T')[0];
+date.setAttribute("min", today);
+
 
 function register(){
     let fullname = document.getElementById("idName");
