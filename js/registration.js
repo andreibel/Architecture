@@ -51,6 +51,7 @@ function register(){
         service: radioServices,
         extras: extras
     };
+    alert("Registration is successful");
     saveRegistration(personRegistration);
     clearTime();
     document.getElementById("appointment-form").reset();
