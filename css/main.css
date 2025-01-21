@@ -1,69 +1,42 @@
-/* Reset and basic styles */
-* {
-  box-sizing: border-box;
-}
-
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-color: #e8c1c1;
+  font-size: 30px;
+}
+
+h1 {
+  color: darkmagenta;
+  font-size: 50px;
 }
 
 h2 {
   color: palevioletred;
   font-size: 40px;
 }
-#column1{
-  margin: 20px;
-}
-h1 {
-  color: darkmagenta;
-  font-size: 50px;
-}
-#appointment-form{
-  font-size: 30px;
-}
-#column2{
-  background-color: #ffecec;
-}
-#column3{
-  background-color: #f2ffdb;
-}
-/* Style the header */
+
 .header {
   display: flex;
-  justify-content: space-evenly; /* Better alignment */
-  align-items: center; /* Vertically center items */
+  justify-content: space-evenly;
+  align-items: center;
   padding: 20px;
-  background-color: #f2f2f2; /* Light gray background for header */
+  background-color: #f2f2f2;
 }
-.form-group{
-  display: flex;
-  justify-content: space-between;
-}
-#column3 input{
-    font-size: 1.5rem;
-    padding: 0.5rem;
-    width: 300px;
-}
-#column3{
-  margin: 0.5rem;
-}
+
 #headImage {
   width: 100px;
 }
-iframe#map{
-  height: 300px;
-  width: 100%;
+
+.form-group {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0px 10px 0px;
 }
 
-/* Style the top navigation bar */
 .topnavigation {
   overflow: hidden;
   background-color: #333;
 }
 
-/* Style the topnav links */
 .topnavigation a {
   float: left;
   display: block;
@@ -73,59 +46,41 @@ iframe#map{
   text-decoration: none;
 }
 
-/* Change color on hover */
 .topnavigation a:hover {
   background-color: #ddd;
   color: black;
 }
 
-/* Define the Flex container */
 .row {
   display: flex;
-  flex-wrap: wrap; /* Allows columns to wrap on smaller screens */
-  gap: 20px; /* Space between columns */
-  padding: 20px; /* Optional: Adds padding around the row */
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
 }
 
-/* Redefine the column for Flexbox */
 .column {
-  flex: 1; /* Equal width for all columns */
+  flex: 1;
   padding: 15px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-  border-radius: 15px; /* Rounded corners */
-  transition: transform 0.3s, box-shadow 0.3s; /* Smooth transitions */
-  background-color: #ffffff; /* Default background (overridden by IDs) */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  background-color: #d0faffbd;
 }
 
-#h2Map {
-  text-align: center;
-}
-
-
-
-/* Hover effect to slightly lift the column */
 .column:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 30px 2px rgba(0, 0, 0, 0.15);
 }
 
-/* Clear floats after the columns (no longer needed with Flexbox, but kept for any legacy styles) */
-.row::after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Responsive layout - stacks columns vertically on small screens */
 @media screen and (max-width: 800px) {
   .row {
-      flex-direction: column; /* Stack columns vertically */
-      gap: 10px; /* Reduce gap for smaller screens */
+    flex-direction: column;
+    gap: 10px;
   }
-  
+
   .column {
-      flex: none; /* Remove flex property */
-      width: 100%; /* Full width for each column */
+    flex: none;
+    width: 100%;
   }
 }
 
@@ -134,19 +89,18 @@ iframe#map{
   justify-content: space-evenly;
 }
 
-/* Additional Styling for the Form and Table */
 form {
   padding: 20px;
-  background-color: #fafafa;
-  border-radius: 15px; /* Rounded corners for the form */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  background-color: #d0ffe6;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   margin: 20px;
 }
 
-.serveis-table {
+.serveis-table{
   width: 100%;
   border-collapse: collapse;
-  margin-top: 10px; /* Space above the table */
+  margin-top: 10px;
 }
 
 .serveis-table th, .serveis-table td {
@@ -158,31 +112,26 @@ form {
 .serveis-table th {
   background-color: #4CAF50;
   color: white;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-}
-
-.serveis-table td {
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
 }
 
 .serveis-table tr:nth-child(even) {
-  background-color: #f2f2f2;
+  background-color: #edffeb;
+}
+.serveis-table tr:nth-child(odd) {
+  background-color: #ebfffc;
 }
 
 .serveis-table tr:hover {
-  background-color: #ddd;
+  background-color: #dddddd;
 }
 
-/* Style the submit and reset buttons */
 .buttons button {
   padding: 10px 20px;
   font-size: 16px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Slight shadow */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   transition: background-color 0.3s, transform 0.3s;
 }
 
