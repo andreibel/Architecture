@@ -1,10 +1,3 @@
-//TODO: print table of all registration by date
-//TODO: print chart of all the regisration of the week
-//TODO: print chart of all the money ernd in week / day (choise)
-
-// Fetch all registrations and populate the Appointments Table
-// צריך לבנות טבלה רספונסיבית כך שכל פעם שלוחצים רענן כל הנתונים מתווספים לטבלה
-// Function to populate the table with data
 
 //          ******** Table data *********
 
